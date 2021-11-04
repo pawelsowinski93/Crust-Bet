@@ -66,6 +66,7 @@ const GameSelect: React.FC<IGameSelectProps> = ({
             <List component="nav" className={classes.root} aria-label="contacts">
                 {(filterActive ? filterActiveGames(games) : games).map(({ id, active, name}) => (
                     <ListItem
+                        key={id}
                         button
                         onClick={
                             (): void => {

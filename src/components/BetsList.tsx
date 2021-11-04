@@ -48,8 +48,8 @@ const BetsList: React.FC<IBetsList> = ({
 
     return (
         <div>
-            {bets.map(({ raceName, first, second, third }) => (
-                <div className={classes.root}>
+            {bets.map(({ raceName, first, second, third }, index) => (
+                <div className={classes.root} key={index}>
                     <Paper classes={{ root: classes.paper }} elevation={4} >
                         <div className={classes.wrapper}>
                             <Typography gutterBottom variant="h5" component="h2">

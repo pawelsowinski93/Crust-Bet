@@ -70,8 +70,8 @@ const CompleteBet: React.FC<ICompleteBetProps> = ({
                 <Button onClick={() => setIsConfirmationOpen(true)} classes={{ root: classes.button }} variant="outlined">PAY</Button>
             </div>
             <Divider />
-            {betList.map(({ raceName, first, second, third }) => (
-                <div className={classes.betInfo}>
+            {betList.map(({ raceName, first, second, third }, index) => (
+                <div className={classes.betInfo} key={index}>
                     <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             GAME
